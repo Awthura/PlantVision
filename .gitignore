@@ -1,0 +1,49 @@
+# Data (download via scripts/download_data.py)
+data/PhenoBench*/
+data/*.zip
+data/raw/
+data/processed/
+
+# Model weights & training runs
+runs/
+models/
+*.pt
+*.pth
+
+# Exports (optionally commit small ONNX models separately)
+outputs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual env (uv)
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoint
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Secrets / env
+.env
+*.env
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# uv lockfile is committed (see pyproject.toml)
+# uv.lock — intentionally NOT ignored

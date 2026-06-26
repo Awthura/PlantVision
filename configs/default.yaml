@@ -1,0 +1,48 @@
+# PlantVision — config-driven defaults. Override via CLI flags or env vars.
+
+# ── Paths ──────────────────────────────────────────────────────────────────
+data:
+  root: data/PhenoBench          # populated by scripts/download_data.py
+  train: data/PhenoBench/train
+  val:   data/PhenoBench/val
+
+outputs:
+  runs:    runs/                  # YOLO training artifacts
+  models:  models/                # saved .pt weights
+  overlays: outputs/overlays/     # per-image overlay PNGs
+  traits:  outputs/traits.csv
+  chart:   outputs/canopy_chart.png
+  onnx:    outputs/plantvision.onnx
+
+# ── Model ──────────────────────────────────────────────────────────────────
+model:
+  # Verify the current ultralytics model name at install time.
+  # As of 2026-06, use yolo12n-seg or the latest small seg variant.
+  name: yolo12n-seg              # n=nano (fast), swap to s/m for more capacity
+  device: mps                    # mps | cpu | cuda (overridable via --device)
+
+# ── Training ───────────────────────────────────────────────────────────────
+train:
+  epochs: 50
+  batch: 8                       # reduce to 4 on low-VRAM / CPU
+  imgsz: 640
+  lr0: 0.01
+  patience: 10                   # early-stop
+  workers: 4
+  project: runs/plantvision
+  name: train
+
+# ── Inference / traits ─────────────────────────────────────────────────────
+infer:
+  conf: 0.25                     # detection confidence threshold
+  iou: 0.45                      # NMS IoU threshold
+
+traits:
+  crop_class: 0                  # PhenoBench class index for sugar-beet crop
+  weed_class: 1                  # PhenoBench class index for weed
+
+# ── Visualization ──────────────────────────────────────────────────────────
+viz:
+  crop_color: [0, 200, 0]        # BGR green
+  weed_color: [0, 0, 220]        # BGR red
+  alpha: 0.45
