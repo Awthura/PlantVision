@@ -21,8 +21,8 @@ logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 log = logging.getLogger(__name__)
 
 # ── UPDATE THESE before first run ──────────────────────────────────────────
-DATASET_URL = "https://phenobench.org/dataset.html"   # <- replace with direct zip URL
-EXPECTED_MD5 = ""                                      # <- fill from official page
+DATASET_URL = "https://www.phenobench.org/data/PhenoBench-v110.zip"
+EXPECTED_MD5 = ""                                      # set if checksum is published
 ZIP_NAME = "PhenoBench-v110.zip"
 # ───────────────────────────────────────────────────────────────────────────
 
@@ -52,14 +52,6 @@ def main() -> None:
 
     out_dir = Path(args.out)
     zip_path = out_dir.parent / ZIP_NAME
-
-    if DATASET_URL.startswith("https://phenobench.org/dataset.html"):
-        log.error(
-            "DATASET_URL is still the placeholder landing page, not a direct download link.\n"
-            "Visit %s, find the direct zip URL, and set DATASET_URL in this script.",
-            DATASET_URL,
-        )
-        raise SystemExit(1)
 
     if not zip_path.exists():
         download(args.url, zip_path)
