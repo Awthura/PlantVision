@@ -1,9 +1,8 @@
 """
 YOLO segmentation — training and inference wrappers.
 
-Verify the ultralytics model name at runtime:
-  from ultralytics import YOLO; YOLO("yolo12n-seg.pt")
-Swap cfg.model.name to the correct identifier if needed.
+Model name verified: yolo26n-seg.pt / yolo26s-seg.pt (ultralytics 8.4.79).
+Swap cfg.model.name to yolo26s-seg for higher mIoU at the cost of speed.
 """
 
 from __future__ import annotations

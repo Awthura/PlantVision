@@ -9,8 +9,8 @@ description = "Sugar-beet field phenotyping via UAV imagery and YOLO instance se
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    # verify ultralytics version supports yolo12n-seg (or later) at install time
-    "ultralytics>=8.3",
+    # yolo26n-seg confirmed available in ultralytics 8.4.79 (verified 2026-06)
+    "ultralytics>=8.4",
     "torch>=2.3",
     "torchvision>=0.18",
     "opencv-python-headless>=4.10",

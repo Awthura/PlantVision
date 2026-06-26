@@ -16,9 +16,9 @@ outputs:
 
 # ── Model ──────────────────────────────────────────────────────────────────
 model:
-  # Verify the current ultralytics model name at install time.
-  # As of 2026-06, use yolo12n-seg or the latest small seg variant.
-  name: yolo12n-seg              # n=nano (fast), swap to s/m for more capacity
+  # Verified against ultralytics 8.4.79 (2026-06). GITHUB_ASSETS_STEMS confirms
+  # yolo26n-seg.pt is available for download. Swap to yolo26s-seg for higher mIoU.
+  name: yolo26n-seg              # n=nano (fast), swap to s/m for more capacity
   device: mps                    # mps | cpu | cuda (overridable via --device)
 
 # ── Training ───────────────────────────────────────────────────────────────
