@@ -1,0 +1,7 @@
+path: /Users/awthura/PlantVision/data/PhenoBench
+train: train/images
+val: val/images
+nc: 2
+names:
+- crop
+- weed

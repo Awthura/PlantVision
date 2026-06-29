@@ -6,12 +6,12 @@ data/processed/
 
 # Model weights & training runs
 runs/
-models/
 *.pt
 *.pth
+# ONNX committed at models/best.onnx — do not ignore models/ dir
 
-# Exports (optionally commit small ONNX models separately)
-outputs/
+# Exports — overlays too large to commit; commit traits.csv and chart separately
+outputs/overlays/
 
 # Python
 __pycache__/

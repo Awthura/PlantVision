@@ -23,6 +23,7 @@ dependencies = [
     "onnx>=1.16",
     "onnxruntime>=1.18",
     "tqdm>=4.66",
+    "onnxslim>=0.1.94",
 ]
 
 [project.optional-dependencies]
