@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PlantVision — Sugar Beet Field Phenotyping</title>
-  <meta name="description" content="Automated canopy-cover extraction from UAV imagery using YOLO26 instance segmentation. Built for sugar-beet breeding trials.">
-  <meta property="og:title" content="PlantVision — Sugar Beet Field Phenotyping">
+  <title>PlantVision: Sugar Beet Field Phenotyping</title>
+  <meta name="description" content="Automated canopy cover extraction from UAV imagery using YOLO26 instance segmentation. Built for sugar beet breeding trials.">
+  <meta property="og:title" content="PlantVision: Sugar Beet Field Phenotyping">
   <meta property="og:description" content="YOLO26 instance segmentation on PhenoBench UAV imagery. Automates canopy cover extraction for plant breeding pipelines.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
@@ -107,7 +107,7 @@
       <span class="badge-custom badge-seg">🧬 Plant Breeding</span>
     </div>
     <h1>PlantVision</h1>
-    <p class="lead mb-4">Automated canopy-cover extraction from UAV field imagery<br>for sugar-beet breeding trials — powered by YOLO26 instance segmentation.</p>
+    <p class="lead mb-4">Automated canopy cover extraction from UAV field imagery<br>for sugar beet breeding trials, powered by YOLO26 instance segmentation.</p>
     <div class="d-flex flex-wrap gap-2">
       <a href="https://github.com/Awthura/PlantVision" target="_blank"
          class="btn btn-light btn-sm px-4">GitHub</a>
@@ -134,12 +134,12 @@
 
   <!-- Problem statement -->
   <h2 class="section-title">Why this project</h2>
-  <p class="col-lg-9">Manual plot scoring is the throughput bottleneck in modern plant breeding trials — a single field trial can contain thousands of plots that agronomists must score by eye. PlantVision automates canopy-cover measurement from UAV imagery, turning a subjective, labour-intensive task into a reproducible per-image metric that feeds directly into a breeding pipeline.</p>
+  <p class="col-lg-9">Manual plot scoring is the throughput bottleneck in modern plant breeding trials. A single field trial can contain thousands of plots that agronomists must score by eye. PlantVision automates canopy cover measurement from UAV imagery, turning a subjective, labour intensive task into a reproducible per image metric that feeds directly into a breeding pipeline.</p>
 
   <!-- Pipeline -->
   <h2 class="section-title">Pipeline</h2>
   <div class="pipeline-box col-lg-9">
-    PhenoBench images ──▶ fine-tune yolo26n-seg ──▶ per-image instance masks<br>
+    PhenoBench images ──▶ fine-tune yolo26n-seg ──▶ per image instance masks<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──▶ canopy cover % &amp; plant count<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──▶ overlay PNG + traits.csv + canopy chart<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──▶ ONNX export (10.5 MB)
@@ -152,39 +152,39 @@
     &nbsp;&nbsp;
     <span class="legend-dot" style="background:#dc0000;"></span>Weed
     &nbsp;&nbsp;
-    From the PhenoBench validation set — early growth stage (May) to canopy closure (June).
+    From the PhenoBench validation set, covering early growth stage (May) to canopy closure (June).
   </p>
   <div class="row g-3 overlay-grid">
     <div class="col-6 col-md-4">
-      <img src="images/05-26_00194_P0034121.png" alt="Overlay — cover 1.2%, 19 plants" loading="lazy">
+      <img src="images/05-26_00194_P0034121.png" alt="Overlay, cover 1.2%, 19 plants" loading="lazy">
       <div class="overlay-caption">Cover: 1.2% &nbsp;|&nbsp; Count: 19 &nbsp;|&nbsp; 26 May</div>
     </div>
     <div class="col-6 col-md-4">
-      <img src="images/05-26_00193_P0034121.png" alt="Overlay — cover 1.0%, 17 plants" loading="lazy">
+      <img src="images/05-26_00193_P0034121.png" alt="Overlay, cover 1.0%, 17 plants" loading="lazy">
       <div class="overlay-caption">Cover: 1.0% &nbsp;|&nbsp; Count: 17 &nbsp;|&nbsp; 26 May</div>
     </div>
     <div class="col-6 col-md-4">
-      <img src="images/06-05_00079_P0037991.png" alt="Overlay — cover 8.9%, 19 plants" loading="lazy">
+      <img src="images/06-05_00079_P0037991.png" alt="Overlay, cover 8.9%, 19 plants" loading="lazy">
       <div class="overlay-caption">Cover: 8.9% &nbsp;|&nbsp; Count: 19 &nbsp;|&nbsp; 5 June</div>
     </div>
     <div class="col-6 col-md-4">
-      <img src="images/05-26_00244_P0034016.png" alt="Overlay — cover 9.3%, 18 plants" loading="lazy">
+      <img src="images/05-26_00244_P0034016.png" alt="Overlay, cover 9.3%, 18 plants" loading="lazy">
       <div class="overlay-caption">Cover: 9.3% &nbsp;|&nbsp; Count: 18 &nbsp;|&nbsp; 26 May</div>
     </div>
     <div class="col-6 col-md-4">
-      <img src="images/06-05_00089_P0037822.png" alt="Overlay — cover 25.3%, 11 plants" loading="lazy">
+      <img src="images/06-05_00089_P0037822.png" alt="Overlay, cover 25.3%, 11 plants" loading="lazy">
       <div class="overlay-caption">Cover: 25.3% &nbsp;|&nbsp; Count: 11 &nbsp;|&nbsp; 5 June</div>
     </div>
     <div class="col-6 col-md-4">
-      <img src="images/06-05_00177_P0038051.png" alt="Overlay — cover 27.4%, 9 plants" loading="lazy">
+      <img src="images/06-05_00177_P0038051.png" alt="Overlay, cover 27.4%, 9 plants" loading="lazy">
       <div class="overlay-caption">Cover: 27.4% &nbsp;|&nbsp; Count: 9 &nbsp;|&nbsp; 5 June</div>
     </div>
   </div>
 
   <!-- Canopy chart -->
-  <h2 class="section-title">Canopy cover distribution — val set (n=772)</h2>
-  <img src="images/canopy_chart.png" alt="Per-image canopy cover bar chart" class="chart-img col-lg-10">
-  <p class="text-muted mt-2" style="font-size:0.88rem;">Mean: 4.2% &nbsp;|&nbsp; Median: 2.4% &nbsp;|&nbsp; Max: 27.4% &nbsp;|&nbsp; Reflects early-to-mid growth stages in the PhenoBench dataset.</p>
+  <h2 class="section-title">Canopy cover distribution, val set (n=772)</h2>
+  <img src="images/canopy_chart.png" alt="Per image canopy cover bar chart" class="chart-img col-lg-10">
+  <p class="text-muted mt-2" style="font-size:0.88rem;">Mean: 4.2% &nbsp;|&nbsp; Median: 2.4% &nbsp;|&nbsp; Max: 27.4% &nbsp;|&nbsp; Reflects early to mid growth stages in the PhenoBench dataset.</p>
 
   <!-- Model -->
   <h2 class="section-title">Model &amp; training</h2>
@@ -208,9 +208,9 @@
     <div class="col-md-6">
       <div class="pipeline-box h-100" style="font-family: inherit; font-size: 0.9rem;">
         <strong>Class mapping</strong><br><br>
-        🟢 Class 0 — Crop (sugar beet)<br>
+        🟢 Class 0: Crop (sugar beet)<br>
         &nbsp;&nbsp;&nbsp;&nbsp;PhenoBench semantics 1 &amp; 3<br><br>
-        🔴 Class 1 — Weed<br>
+        🔴 Class 1: Weed<br>
         &nbsp;&nbsp;&nbsp;&nbsp;PhenoBench semantics 2 &amp; 4<br><br>
         <strong>Trait extraction</strong><br><br>
         Canopy cover % = crop pixels ÷ image pixels<br>
@@ -221,19 +221,19 @@
 
   <!-- Deliberately out of scope -->
   <h2 class="section-title">Deliberately out of scope</h2>
-  <p class="text-muted">This is a bounded pilot. Naming what was left out is intentional — it demonstrates scoping judgment.</p>
+  <p class="text-muted">This is a bounded pilot. Naming what was left out is intentional, it demonstrates scoping judgment.</p>
   <div class="col-lg-9">
-    <div class="scope-item"><strong>SAM 3 auto-labeling</strong> — PhenoBench is already labeled. For an unlabeled new field, SAM 3 would bootstrap masks from a text prompt.</div>
-    <div class="scope-item"><strong>NIRS + PLS calibration</strong> — The phenomic-selection extension: pair hyperspectral reflectance with trait measurements, fit PLS/LightGBM. How near-infrared data becomes breeding values on real platforms.</div>
-    <div class="scope-item"><strong>Orthomosaic / GIS field map</strong> — Production platforms stitch drone frames into an orthomosaic and project plot-level traits onto GIS coordinates.</div>
-    <div class="scope-item"><strong>Cercospora disease severity</strong> — Natural follow-on; requires a separate labeled dataset and a per-lesion severity head.</div>
-    <div class="scope-item"><strong>Time-series, genotype ranking, FastAPI, TensorRT</strong> — Valid extensions for a productionised system; explicitly deferred.</div>
+    <div class="scope-item"><strong>SAM 3 auto labeling</strong>: PhenoBench is already labeled. For an unlabeled new field, SAM 3 would bootstrap masks from a text prompt.</div>
+    <div class="scope-item"><strong>NIRS + PLS calibration</strong>: The phenomic-selection extension: pair hyperspectral reflectance with trait measurements, fit PLS/LightGBM. How near-infrared data becomes breeding values on real platforms.</div>
+    <div class="scope-item"><strong>Orthomosaic / GIS field map</strong>: Production platforms stitch drone frames into an orthomosaic and project plot-level traits onto GIS coordinates.</div>
+    <div class="scope-item"><strong>Cercospora disease severity</strong>: Natural follow on; requires a separate labeled dataset and a per-lesion severity head.</div>
+    <div class="scope-item"><strong>Time-series, genotype ranking, FastAPI, TensorRT</strong>: Valid extensions for a productionised system; explicitly deferred.</div>
   </div>
 
   <!-- Dataset -->
   <h2 class="section-title">Dataset</h2>
-  <p class="col-lg-9"><strong>PhenoBench v1.1.0</strong> — University of Bonn. UAV imagery of sugar-beet fields across two growing seasons under varied natural lighting. Dense pixel-wise labels: semantic (crop/weed), plant instances, leaf instances. ~1,407 train / 772 val images. License: CC BY-NC-SA 4.0.</p>
-  <p class="text-muted col-lg-9" style="font-size:0.85rem;">Weyler et al., "PhenoBench — A Large Dataset and Benchmarks for Semantic Image Interpretation in the Agricultural Domain", arXiv 2023.</p>
+  <p class="col-lg-9"><strong>PhenoBench v1.1.0</strong>, University of Bonn. UAV imagery of sugar beet fields across two growing seasons under varied natural lighting. Dense pixel wise labels: semantic (crop/weed), plant instances, leaf instances. ~1,407 train / 772 val images. License: CC BY-NC-SA 4.0.</p>
+  <p class="text-muted col-lg-9" style="font-size:0.85rem;">Weyler et al., "PhenoBench: A Large Dataset and Benchmarks for Semantic Image Interpretation in the Agricultural Domain", arXiv 2023.</p>
 
 </div>
 
@@ -242,7 +242,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <strong style="color:white;">PlantVision</strong> &mdash; Sugar Beet Field Phenotyping Pilot<br>
+        <strong style="color:white;">PlantVision</strong>, Sugar Beet Field Phenotyping Pilot<br>
         Built by <a href="https://awthura.github.io/my-portfolio">Aw Thura</a>
       </div>
       <div class="col-md-6 text-md-end mt-3 mt-md-0">
